@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: rgb(199, 210, 195);
+}
+
+/* Navbar css start from here  */
+.navbar{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+.todo_heading h1{
+    margin-left: 1rem;
+}
+
+.navbar .todo_heading h1{
+    color: grey;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+.navbar .about a {
+    text-decoration: none;
+}
+.navbar .about a h3 {
+    color: white;
+    font-size: 1.3rem;
+    
+}
+.navbar .about a h3:hover{
+    color: grey;
+}
+
+/* Navbar css end here  */
+
+/* List css start from here  */
+
+
+.list {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 2rem 0rem 2rem;
+    gap: 0rem 1rem;
+}
+.list .window1{
+    width: 60%;
+    height: 35rem;
+    background-color: white;
+    border-radius: 1.3rem;
+}
+.list .window1 .list_heading {
+    margin: 1rem 0rem 0rem 1.5rem;
+    display: block;
+}
+.list .window1 .list_heading h1{
+    color: rgba(0, 0, 0, 0.598);
+    font-weight: 700;
+    font-size: 2rem;
+}
+.list .window1 .task .add_task {
+    margin: 1rem 0rem 0rem 1.5rem;
+}
+.list .window1 .task .add_task .fa-plus{
+    margin-right: .2rem;
+    color: rgba(0, 0, 0, 0.598);
+}
+.list .window1 .task .add_task span {
+    color: rgba(0, 0, 0, 0.598);
+    font-weight: 600;
+}
+
+.list .window2 {
+    padding-left: 2rem;
+    width: 40%;
+    background-color: white;
+    border-radius: 1.3rem;
+}   
+.list .window2 .task_heading {
+    margin-top: 1.5rem;
+}
+.list .window2 .task_heading h1 {
+    color: rgba(0, 0, 0, 0.598);
+    font-weight: 600;
+}
+.list .window2 .task_detail {
+    margin-top: 3rem;
+}
+.list .window2 .task_detail .add_task .fa-circle-o {
+    color: rgba(0, 0, 0, 0.598);
+}
+.list .window2 .task_detail .add_desc {
+    margin-top: 3rem;
+}
+.list .window2 .add_btn {
+    width: 5.7rem;
+    height: 2.2rem;
+    border-radius: .3rem;
+    background-color: rgb(200, 35, 51);
+    color: white;
+    font-weight: 700;
+    border: none;
+    margin-top: 1.7rem;
+}
+.list .window2 .fa-plus {
+    margin-right: 5px;
+}
+label{
+    color: rgba(0, 0, 0, 0.598);
+}
+input {
+    display: block;
+    border: none; 
+    border-bottom: 2px solid #000;
+    outline: none;
+    width: 85%;
+}
+/* List css end here  */

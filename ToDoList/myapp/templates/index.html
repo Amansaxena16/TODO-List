@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css"
+        integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>TODO List</title>
+</head>
+
+<body>
+    <!-- Navbar start from here  -->
+    <div class="navbar">
+        <div class="todo_heading">
+            <h1>TODO List</h1>
+        </div>
+        <div class="about">
+            <a href="#">
+                <h3>Home</h3>
+            </a>
+        </div>
+        <div class="about">
+            <a href="#">
+                <h3>About</h3>
+            </a>
+        </div>
+    </div>
+    <!-- navbar end  -->
+
+    <!-- List section start from here  -->
+    <div class="list">
+        <div class="window1">
+            <div class="list_heading">
+                <h1>Today</h1>
+            </div>
+            <div class="task">
+                
+            </div>
+        </div>
+        <div class="window2">
+            <div class="task_heading">
+                <h1>Task:</h1>
+            </div>
+            <div class="task_detail">
+                <form action="{% url 'index' %}" method="#">
+                    {% csrf_token %}
+                    <div class="add_task">
+                        <i class="fa fa-circle-o" aria-hidden="true"></i>
+                        <label for="add_task">Add Task</label>
+                        <input type="text" id="add_task" name="add_task" required>
+                    </div>
+                    <div class="add_desc">
+                        <i class="fa fa-circle-o" aria-hidden="true"></i>
+                        <label for="add_desc">Add Description</label>
+                        <input type="text" id="add_desc" name="add_desc">
+                    </div>
+                    <button class="add_btn action" type="submit"><span><i class="fa fa-plus" aria-hidden="true"></i></span> Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- list section end here  -->
+</body>
+
+</html>

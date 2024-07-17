@@ -97,6 +97,9 @@ body{
     font-weight: 700;
     border: none;
 }
+.list .window1 .tasks ul li .done_btn .btn_id {
+    display: none;
+}
 .list .window1 .tasks ul .line{
     border: 1px solid rgb(177, 175, 175);
 }

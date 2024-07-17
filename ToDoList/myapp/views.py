@@ -7,12 +7,13 @@ def index(request):
         description = request.POST.get('add_desc')
         task = Task(title=title,description=description)
         task.save()
-    else:
-        tasks = Task.objects.all()
-        count = tasks.count()
-        return render(request,'index.html',{'tasks' : tasks, 'count' : count})
     
-def removeTask(id):
+    tasks = Task.objects.all()
+    count = tasks.count()
+    return render(request,'index.html',{'tasks' : tasks, 'count' : count})
+    
+def removeTask(request,id):
+    print("id",id)
     task = Task.objects.get(id=id)
     task.delete()
     print("done")

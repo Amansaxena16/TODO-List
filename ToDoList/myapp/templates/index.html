@@ -44,13 +44,15 @@
                     <li>
                         <div class="task_data">
                             <i class="fa fa-circle-o" aria-hidden="true"></i>
-                            {{task.id}}
+                            
                             {{ task.title }}
                             <span>{{ task.description }}</span>
                         </div>
                         <form action="{% url 'removeTask' task.id%}" method="post">
                             {% csrf_token %}
-                            <button class="done_btn" type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
+                            <button class="done_btn" type="submit">
+                                <span class="btn_id">{{task.id}}</span>
+                                <i class="fa fa-check" aria-hidden="true"></i></button>
                         </form>
                     </li>
                     <div class="line"></div>

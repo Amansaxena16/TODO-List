@@ -15,6 +15,7 @@ body{
     display: flex;
     align-items: center;
     gap: 1.2rem;
+    margin-top: 1rem;
 }
 .todo_heading h1{
     margin-left: 1rem;
@@ -45,36 +46,60 @@ body{
 .list {
     display: flex;
     justify-content: center;
-    margin: 2rem 2rem 0rem 2rem;
-    gap: 0rem 1rem;
+    padding: 1rem;
+    gap: 0rem 1.2rem;
 }
 .list .window1{
     width: 60%;
     height: 35rem;
     background-color: white;
     border-radius: 1.3rem;
+    padding: 1.5rem 1.5rem 0rem 1.5rem;
 }
 .list .window1 .list_heading {
-    margin: 1rem 0rem 0rem 1.5rem;
-    display: block;
+    margin-bottom: 1rem;
+    background-color: white;
+    height: 10%;
 }
 .list .window1 .list_heading h1{
     color: rgba(0, 0, 0, 0.598);
     font-weight: 700;
     font-size: 2rem;
 }
-.list .window1 .task .add_task {
-    margin: 1rem 0rem 0rem 1.5rem;
+.list .window1 .tasks{
+    height: 80%;
 }
-.list .window1 .task .add_task .fa-plus{
-    margin-right: .2rem;
-    color: rgba(0, 0, 0, 0.598);
+.list .window1 .tasks ul {
+    overflow-y: scroll;
+    height: 100%;
+    padding: .5rem;
+    border-radius: 20px;
 }
-.list .window1 .task .add_task span {
-    color: rgba(0, 0, 0, 0.598);
+.list .window1 .tasks ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0rem;
     font-weight: 600;
 }
-
+.list .window1 .tasks ul li .task_data span{
+    display: block;
+    margin-left: 3px;
+    font-weight: 400;
+    font-size: .8rem;
+}
+.list .window1 .tasks ul li .done_btn {
+    width: 3.5rem;
+    height: 2rem;   
+    background-color: rgb(33, 136, 56);
+    border-radius: .3rem;
+    color: white;
+    font-weight: 700;
+    border: none;
+}
+.list .window1 .tasks ul .line{
+    border: 1px solid rgb(177, 175, 175);
+}
 .list .window2 {
     padding-left: 2rem;
     width: 40%;
@@ -119,5 +144,9 @@ input {
     border-bottom: 2px solid #000;
     outline: none;
     width: 85%;
+}
+.fa-circle-o {
+    font-size: .8rem;
+    color: rgba(0, 0, 0, 0.598);
 }
 /* List css end here  */

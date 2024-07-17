@@ -1,9 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Task
-
-def renderTask(request):
-    tasks = Task.objects.all()
-    return render(request,'index.html',{'tasks' : tasks})
 
 def index(request):
     if request.method == 'POST':
@@ -11,8 +7,15 @@ def index(request):
         description = request.POST.get('add_desc')
         task = Task(title=title,description=description)
         task.save()
-        
-        return render(request,'index.html')
     else:
-        return render(request,'index.html')
+        tasks = Task.objects.all()
+        count = tasks.count()
+        return render(request,'index.html',{'tasks' : tasks, 'count' : count})
+    
+def removeTask(id):
+    task = Task.objects.get(id=id)
+    task.delete()
+    print("done")
+    return redirect('index')
+    
     
